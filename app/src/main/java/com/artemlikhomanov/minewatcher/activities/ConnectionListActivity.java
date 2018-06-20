@@ -44,7 +44,7 @@ public class ConnectionListActivity extends AppCompatActivity implements View.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
-        //test comment
+        
         ButterKnife.bind(this);
 
         FragmentManager fm = getSupportFragmentManager();
