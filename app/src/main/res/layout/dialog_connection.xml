@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:theme="@style/DialogConnection">
+
+    <EditText
+        android:id="@+id/enter_ip_edit_text"
+        android:inputType="phone"
+        android:digits="0123456789."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/dialog_enter_ip_address"/>
+
+    <EditText
+        android:id="@+id/enter_port_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/dialog_enter_port_number"/>
+
+    <EditText
+        android:id="@+id/enter_name_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/dialog_enter_name"/>
+
+    <Spinner
+        android:id="@+id/shearer_type_spinner"
+        android:layout_width="@dimen/spinner_width"
+        android:layout_height="wrap_content">
+    </Spinner>
+
+</LinearLayout>

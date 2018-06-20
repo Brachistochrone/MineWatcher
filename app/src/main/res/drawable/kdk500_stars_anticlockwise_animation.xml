@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:oneshot="false">
+
+    <item android:drawable="@drawable/kdk500_stars_0" android:duration="@dimen/cutter_animation_duration"/>
+    <item android:drawable="@drawable/kdk500_stars_7" android:duration="@dimen/cutter_animation_duration"/>
+    <item android:drawable="@drawable/kdk500_stars_6" android:duration="@dimen/cutter_animation_duration"/>
+    <item android:drawable="@drawable/kdk500_stars_5" android:duration="@dimen/cutter_animation_duration"/>
+    <item android:drawable="@drawable/kdk500_stars_4" android:duration="@dimen/cutter_animation_duration"/>
+    <item android:drawable="@drawable/kdk500_stars_3" android:duration="@dimen/cutter_animation_duration"/>
+    <item android:drawable="@drawable/kdk500_stars_2" android:duration="@dimen/cutter_animation_duration"/>
+    <item android:drawable="@drawable/kdk500_stars_1" android:duration="@dimen/cutter_animation_duration"/>
+
+</animation-list>

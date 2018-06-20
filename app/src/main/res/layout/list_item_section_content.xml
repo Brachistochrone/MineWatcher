@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/default_padding"
+              android:layout_marginEnd="@dimen/default_padding"
+              android:layout_marginTop="@dimen/half_default_padding"
+              android:layout_marginBottom="@dimen/default_padding"
+              android:background="@drawable/background_with_middle_borders"
+              xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/section_content_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/section_content_text_view_padding"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        tools:text="Неисправность"/>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/thermometer_container"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools">
+
+    <com.artemlikhomanov.minewatcher.views.MotorThermometersView
+        android:id="@+id/motor_thermometers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding"
+        tools:mtv_headerText="@string/left_cutter_motor_full_name"
+        tools:mtv_statorTemperatureText="@string/motor_temperature_min"
+        tools:mtv_bearingNTemperatureText="@string/motor_temperature_min"
+        tools:mtv_bearingPTemperatureText="@string/motor_temperature_min"
+        tools:mtv_gearcaseTemperatureText="@string/motor_temperature_min"
+        app:mtv_statorTemperatureBottomText="@string/stator"
+        app:mtv_bearingNTemperatureBottomText="@string/bearing_n"
+        app:mtv_bearingPTemperatureBottomText="@string/bearing_p"
+        app:mtv_gearcaseTemperatureBottomText="@string/gearcase"
+        app:mtv_headerTextColor="?attr/colorPrimary"
+        app:mtv_textColor="?attr/colorPrimary"
+        app:mtv_headerTextSize="@dimen/motor_thermometers_name_text_size"
+        app:mtv_temperatureTextSize="@dimen/motor_thermometers_temperature_text_size"
+        app:mtv_bottomLineTextSize="@dimen/motor_thermometers_legend_text_size"
+        app:mtv_temperatureBarColor="@drawable/motor_temperature_gradient"
+        app:mtv_thermometerImage="@drawable/thermometer"
+        app:mtv_boundaryColor="?attr/colorPrimary"
+        app:mtv_statorMaxTemperature="@dimen/max_motor_temperature"
+        app:mtv_bearingMaxTemperature="@dimen/max_bearing_temperature"
+        app:mtv_gearcaseMaxTemperature="@dimen/max_bearing_temperature"/>
+
+</FrameLayout>

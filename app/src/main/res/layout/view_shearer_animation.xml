@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/view_shearer_animation_margin"
+              tools:context="com.artemlikhomanov.minewatcher.activities.ConnectionWithShearerActivity">
+
+    <ImageView
+        android:id="@+id/left_cutter_image_view"
+        android:layout_width="@dimen/cutter_image_view_width_portrait"
+        android:layout_height="@dimen/cutter_image_view_height_portrait"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        tools:src="@drawable/kdk500_left_cutter_0"
+        tools:ignore="ContentDescription"/>
+
+    <ImageView
+        android:id="@+id/shearer_image_view"
+        android:layout_width="@dimen/shearer_image_view_width_portrait"
+        android:layout_height="@dimen/cutter_image_view_height_portrait"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/left_cutter_image_view"
+        tools:src="@drawable/kdk500_stars_0"
+        tools:ignore="ContentDescription"/>
+
+    <ImageView
+        android:id="@+id/right_cutter_image_view"
+        android:layout_width="@dimen/cutter_image_view_width_portrait"
+        android:layout_height="@dimen/cutter_image_view_height_portrait"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/shearer_image_view"
+        tools:src="@drawable/kdk500_right_cutter_0"
+        tools:ignore="ContentDescription"/>
+
+</RelativeLayout>

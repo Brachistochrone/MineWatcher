@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_shearer_type">Модель комбайна</string>
+
+    <string-array name="shearer_types">
+        <item>Модель комбайна</item>
+        <item>CLS450 №1</item>
+        <item>CLS450</item>
+        <item>КДК500</item>
+    </string-array>
+</resources>

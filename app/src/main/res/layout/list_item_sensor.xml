@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:theme="@style/AppTheme">
+
+    <TextView
+        android:id="@+id/parameter_text_view"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_sensor_height"
+        android:paddingStart="@dimen/default_padding"
+        android:paddingTop="@dimen/list_item_sensor_padding"
+        android:paddingEnd="@dimen/list_item_sensor_padding"
+        android:paddingBottom="@dimen/list_item_sensor_padding"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        tools:text = "@string/hydraulic_fluid_temperature_name"/>
+
+    <View style="@style/VerticalDivider"/>
+
+    <TextView
+        android:id="@+id/value_text_view"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_sensor_height"
+        android:padding="@dimen/default_padding"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="center"
+        tools:text = "@string/motor_temperature_min"/>
+
+</LinearLayout>

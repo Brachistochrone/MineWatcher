@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorLightBlue">#81D4FA</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorRedForGradient">#FF0000</color>
+    <color name="colorRedForConnection">#C21807</color>
+    <color name="colorYellowForGradient">#FFFF00</color>
+    <color name="colorGreenForGradient">#00FF00</color>
+    <color name="colorGreenForArrows">#12E603</color>
+    <color name="colorGreenForConnection">#009933</color>
+    <color name="colorGrayForProgressBar">#A1A1A1</color>
+    <color name="colorCorumGray">#3E505A</color>
+    <color name="colorCorumDarkGray">#263238</color>
+    <color name="colorCorumLightGray">#B9C8D2</color>
+    <color name="colorCorumLightGrayHint">#64b9c8d2</color>
+    <color name="colorCorumOrange">#F48943</color>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/content_frame"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.artemlikhomanov.minewatcher.activities.ConnectionWithShearerActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <include
+        android:id="@+id/tabs"
+        layout="@layout/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="?attr/actionBarSize"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabs">
+    </android.support.v4.view.ViewPager>
+
+    <ProgressBar
+        android:id="@+id/connection_progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/state_line_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/connection_progress_bar"
+        android:layout_centerHorizontal="true"
+        android:text="@string/connecting"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/message_text_view"
+        android:layout_width="@dimen/connection_message_width"
+        android:layout_height="@dimen/connection_message_height"
+        android:gravity="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorCorumGray"
+        tools:text="@string/underground_modem_not_available"
+        android:background="@drawable/connection_message_background"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:elevation="@dimen/connection_message_elevation">
+    </TextView>
+
+</RelativeLayout>

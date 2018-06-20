@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="MotorCurrentAndTemperatureView">
+
+        <attr name="mctv_headerText" format="string"/>
+        <attr name="mctv_currentText" format="string"/>
+        <attr name="mctv_temperatureText" format="string"/>
+
+        <attr name="mctv_headerTextColor" format="color"/>
+        <attr name="mctv_textColor" format="color"/>
+
+        <attr name="mctv_headerTextSize" format="dimension"/>
+        <attr name="mctv_currentTextSize" format="dimension"/>
+        <attr name="mctv_temperatureTextSize" format="dimension"/>
+
+        <attr name="mctv_backgroundColor" format="color"/>
+
+        <attr name="mctv_currentBarColor" format="reference"/>
+        <attr name="mctv_temperatureBarColor" format="reference"/>
+
+        <attr name="mctv_boundaryColor" format="color"/>
+
+        <attr name="mctv_maxCurrent" format="integer"/>
+        <attr name="mctv_maxTemperature" format="integer"/>
+
+        <attr name="mctv_drawBackground" format="boolean"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="InverterFrequencyView">
+
+        <attr name="ifv_headerText" format="string"/>
+        <attr name="ifv_subHeaderText" format="string"/>
+        <attr name="ifv_givenFrequencyText" format="string"/>
+        <attr name="ifv_actualFrequencyText" format="string"/>
+        <attr name="ifv_givenFrequencyBottomText" format="string"/>
+        <attr name="ifv_actualFrequencyBottomText" format="string"/>
+
+        <attr name="ifv_headerTextColor" format="color"/>
+        <attr name="ifv_textColor" format="color"/>
+
+        <attr name="ifv_headerTextSize" format="dimension"/>
+        <attr name="ifv_subHeaderTextSize" format="dimension"/>
+        <attr name="ifv_frequencyTextSize" format="dimension"/>
+        <attr name="ifv_bottomLineTextSize" format="dimension"/>
+
+        <attr name="ifv_backgroundColor" format="color"/>
+
+        <attr name="ifv_givenFrequencyBarColor" format="reference"/>
+        <attr name="ifv_actualFrequencyBarColor" format="reference"/>
+
+        <attr name="ifv_boundaryColor" format="color"/>
+
+        <attr name="ifv_maxFrequency" format="integer"/>
+
+        <attr name="ifv_drawBackground" format="boolean"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="MotorThermometersView">
+
+        <attr name="mtv_headerText" format="string"/>
+        <attr name="mtv_statorTemperatureText" format="string"/>
+        <attr name="mtv_bearingNTemperatureText" format="string"/>
+        <attr name="mtv_bearingPTemperatureText" format="string"/>
+        <attr name="mtv_gearcaseTemperatureText" format="string"/>
+        <attr name="mtv_statorTemperatureBottomText" format="string"/>
+        <attr name="mtv_bearingNTemperatureBottomText" format="string"/>
+        <attr name="mtv_bearingPTemperatureBottomText" format="string"/>
+        <attr name="mtv_gearcaseTemperatureBottomText" format="string"/>
+
+        <attr name="mtv_headerTextColor" format="color"/>
+        <attr name="mtv_textColor" format="color"/>
+
+        <attr name="mtv_headerTextSize" format="dimension"/>
+        <attr name="mtv_temperatureTextSize" format="dimension"/>
+        <attr name="mtv_bottomLineTextSize" format="dimension"/>
+
+        <attr name="mtv_backgroundColor" format="color"/>
+
+        <attr name="mtv_temperatureBarColor" format="reference"/>
+
+        <attr name="mtv_thermometerImage" format="reference"/>
+
+        <attr name="mtv_boundaryColor" format="color"/>
+
+        <attr name="mtv_statorMaxTemperature" format="integer"/>
+        <attr name="mtv_bearingMaxTemperature" format="integer"/>
+        <attr name="mtv_gearcaseMaxTemperature" format="integer"/>
+
+        <attr name="mtv_drawBackground" format="boolean"/>
+
+    </declare-styleable>
+</resources>

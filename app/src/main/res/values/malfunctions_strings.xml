@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="malfunction_1">Нет связи с панелью лицевой</string>
+    <string name="malfunction_2">Нет связи с i7050 панели лицевой</string>
+    <string name="malfunction_3">Нет связи с i7065 панели лицевой</string>
+
+    <string name="malfunction_4">Нет связи с блоком радиоприемника</string>
+    <string name="malfunction_5">Нет связи с радиопультом (радиопульт выключен)</string>
+
+    <string name="malfunction_6">Нет связи с блоком управления</string>
+    <string name="malfunction_7">Нет связи с i7050  блока управления</string>
+    <string name="malfunction_8">Нет связи с i7017F (A13)  блока управления</string>
+    <string name="malfunction_9">Нет связи с i7017F (A14)  блока управления</string>
+    <string name="malfunction_10">Нет связи с i7017F (A15)  блока управления</string>
+
+    <string name="malfunction_11">Нет связи с панелью контакторов</string>
+    <string name="malfunction_12">Нет связи с БКС (А6) панели контакторов</string>
+    <string name="malfunction_13">Нет связи с БКС (А7) панели контакторов</string>
+
+    <string name="malfunction_14">Нет связи с пультом управления левым</string>
+    <string name="malfunction_15">Нет связи с tCON-DIO пульта левого</string>
+    <string name="malfunction_16">Нет связи с i7015 пульта левого</string>
+    <string name="malfunction_17">Нет связи с блоком индикации пульта левого</string>
+
+    <string name="malfunction_18">Нет связи с пультом управления правым</string>
+    <string name="malfunction_19">Нет связи с tCON-DIO пульта правого</string>
+    <string name="malfunction_20">Нет связи с i7015 пульта правого</string>
+    <string name="malfunction_21">Нет связи с блоком индикации пульта правого</string>
+
+    <string name="malfunction_22">Нет связи с блоком управления распределителями</string>
+    <string name="malfunction_23">Нет связи с i7017FС (A2) блока управления распределителями</string>
+    <string name="malfunction_24">Нет связи с i7017FС (A3) блока управления распределителями</string>
+    <string name="malfunction_25">Нет связи с i7067 блока управления распределителями</string>
+
+    <string name="malfunction_26">Нет связи с датчиком контроля масла</string>
+
+    <string name="malfunction_27">Нет связи с пультом управления штрековым</string>
+    <string name="malfunction_28">Нет связи с tCON-DIO пульта штрекового</string>
+    <string name="malfunction_29">Нет связи с блоком индикации пульта штрекового</string>
+
+    <string name="malfunction_30">Нет связи с Преобразователем частоты</string>
+
+    <string name="malfunction_31">Смена места управления</string>
+    <string name="malfunction_32">Неисправен задатчик выбора места управления на Пульте штрековом</string>
+    <string name="malfunction_33">Неисправен задатчик выбора места управления на Панели лицевой</string>
+    <string name="malfunction_34">Несоответствие задатчиков выбора места управления на комбайне и штреке</string>
+    <string name="malfunction_35">Нет ключа</string>
+    <string name="malfunction_36">Два ключа</string>
+    <string name="malfunction_37">Три ключа</string>
+
+    <string name="malfunction_38">Аварийный перегрев двигателя резания левого</string>
+    <string name="malfunction_39">Аварийный перегрев двигателя резания правого</string>
+    <string name="malfunction_40">Аварийный перегрев двигателя подачи левого</string>
+    <string name="malfunction_41">Аварийный перегрев двигателя подачи правого</string>
+    <string name="malfunction_42">Аварийный перегрев двигателя маслостанции</string>
+
+    <string name="malfunction_43">Предаварийный перегрев двигателя резания левого</string>
+    <string name="malfunction_44">Предаварийный перегрев двигателя резания правого</string>
+    <string name="malfunction_45">Предаварийный перегрев двигателя подачи левого</string>
+    <string name="malfunction_46">Предаварийный перегрев двигателя подачи правого</string>
+
+    <string name="malfunction_47">Обрыв датчика аварийного перегрева двигателя резания левого</string>
+    <string name="malfunction_48">КЗ датчика аварийного перегрева двигателя резания левого</string>
+
+    <string name="malfunction_49">Обрыв датчика аварийного перегрева двигателя резания правого</string>
+    <string name="malfunction_50">КЗ датчика аварийного перегрева двигателя резания правого</string>
+
+    <string name="malfunction_51">Обрыв датчика аварийного перегрева двигателя подачи левого</string>
+    <string name="malfunction_52">КЗ датчика аварийного перегрева двигателя подачи левого</string>
+
+    <string name="malfunction_53">Обрыв датчика аварийного перегрева двигателя подачи правого</string>
+    <string name="malfunction_54">КЗ датчика аварийного перегрева двигателя подачи правого</string>
+
+    <string name="malfunction_55">Обрыв датчика аварийного перегрева двигателя маслостанции</string>
+    <string name="malfunction_56">КЗ датчика аварийного перегрева двигателя маслостанции</string>
+
+    <string name="malfunction_57">Перегрев подшипника двигателя резания левого по Pt100 №1</string>
+    <string name="malfunction_58">Перегрев подшипника двигателя резания левого по Pt100 №2</string>
+    <string name="malfunction_59">Перегрев подшипника двигателя резания левого по Pt100 №3</string>
+
+    <string name="malfunction_60">Перегрев подшипника двигателя резания правого по Pt100 №1</string>
+    <string name="malfunction_61">Перегрев подшипника двигателя резания правого по Pt100 №2</string>
+    <string name="malfunction_62">Перегрев подшипника двигателя резания правого по Pt100 №3</string>
+
+    <string name="malfunction_63">Перегрев подшипника двигателя подачи левого по Pt100 №1</string>
+    <string name="malfunction_64">Перегрев подшипника двигателя подачи левого по Pt100 №2</string>
+    <string name="malfunction_65">Перегрев подшипника двигателя подачи левого по Pt100 №3</string>
+
+    <string name="malfunction_66">Перегрев подшипника двигателя подачи правого по Pt100 №1</string>
+    <string name="malfunction_67">Перегрев подшипника двигателя подачи правого по Pt100 №2</string>
+    <string name="malfunction_68">Перегрев подшипника двигателя подачи правого по Pt100 №3</string>
+
+    <string name="malfunction_69">Аварийный перегрев редуктора резания левого</string>
+    <string name="malfunction_70">Аварийный перегрев редуктора резания правого</string>
+    <string name="malfunction_71">Аварийный перегрев редуктора подачи левого</string>
+    <string name="malfunction_72">Аварийный перегрев редуктора подачи правого</string>
+
+    <string name="malfunction_73">Обрыв датчика перегрева подшипника двигателя резания левого по Pt100 №1</string>
+    <string name="malfunction_74">Обрыв датчика перегрева подшипника двигателя резания левого по Pt100 №2</string>
+    <string name="malfunction_75">Обрыв датчика перегрева подшипника двигателя резания левого по Pt100 №3</string>
+
+    <string name="malfunction_76">КЗ датчика перегрева подшипника двигателя резания левого по Pt100 №1</string>
+    <string name="malfunction_77">КЗ датчика перегрева подшипника двигателя резания левого по Pt100 №2</string>
+    <string name="malfunction_78">КЗ датчика перегрева подшипника двигателя резания левого по Pt100 №3</string>
+
+    <string name="malfunction_79">Обрыв датчика перегрева подшипника двигателя резания правого по Pt100 №1</string>
+    <string name="malfunction_80">Обрыв датчика перегрева подшипника двигателя резания правого по Pt100 №2</string>
+    <string name="malfunction_81">Обрыв датчика перегрева подшипника двигателя резания правого по Pt100 №3</string>
+
+    <string name="malfunction_82">КЗ датчика перегрева подшипника двигателя резания правого по Pt100 №1</string>
+    <string name="malfunction_83">КЗ датчика перегрева подшипника двигателя резания правого по Pt100 №2</string>
+    <string name="malfunction_84">КЗ датчика перегрева подшипника двигателя резания правого по Pt100 №3</string>
+
+    <string name="malfunction_85">Обрыв датчика перегрева подшипника двигателя подачи левого по Pt100 №1</string>
+    <string name="malfunction_86">Обрыв датчика перегрева подшипника двигателя подачи левого по Pt100 №2</string>
+    <string name="malfunction_87">Обрыв датчика перегрева подшипника двигателя подачи левого по Pt100 №3</string>
+
+    <string name="malfunction_88">КЗ датчика перегрева подшипника двигателя подачи левого по Pt100 №1</string>
+    <string name="malfunction_89">КЗ датчика перегрева подшипника двигателя подачи левого по Pt100 №2</string>
+    <string name="malfunction_90">КЗ датчика перегрева подшипника двигателя подачи левого по Pt100 №3</string>
+
+    <string name="malfunction_91">Обрыв датчика перегрева подшипника двигателя подачи правого по Pt100 №1</string>
+    <string name="malfunction_92">Обрыв датчика перегрева подшипника двигателя подачи правого по Pt100 №2</string>
+    <string name="malfunction_93">Обрыв датчика перегрева подшипника двигателя подачи правого по Pt100 №3</string>
+
+    <string name="malfunction_94">КЗ датчика перегрева подшипника двигателя подачи правого по Pt100 №1</string>
+    <string name="malfunction_95">КЗ датчика перегрева подшипника двигателя подачи правого по Pt100 №2</string>
+    <string name="malfunction_96">КЗ датчика перегрева подшипника двигателя подачи правого по Pt100 №3</string>
+
+    <string name="malfunction_97">Обрыв датчика аварийного перегрева редуктора резания левого</string>
+    <string name="malfunction_98">КЗ датчика аварийного перегрева редуктора резания левого</string>
+
+    <string name="malfunction_99">Обрыв датчика аварийного перегрева редуктора резания правого</string>
+    <string name="malfunction_100">КЗ датчика аварийного перегрева редуктора резания правого</string>
+
+    <string name="malfunction_101">Обрыв датчика аварийного перегрева редуктора подачи левого</string>
+    <string name="malfunction_102">КЗ датчика аварийного перегрева редуктора подачи левого</string>
+
+    <string name="malfunction_103">Обрыв датчика аварийного перегрева редуктора подачи правого</string>
+    <string name="malfunction_104">КЗ датчика аварийного перегрева редуктора подачи правого</string>
+
+    <string name="malfunction_105">Загрязнен маслянный фильтр</string>
+
+    <string name="malfunction_106">Отсутствует давление масла в тормозной системе</string>
+    <string name="malfunction_107">Отсутствует давление масла в системе маслонасоса</string>
+    <string name="malfunction_108">Расход воды системы охлаждения МР меньше номинального</string>
+    <string name="malfunction_109">Расход воды системы охлаждения МП меньше номинального</string>
+    <string name="malfunction_110">Недостаточное давление воды в системе орошения</string>
+    <string name="malfunction_111">Общий расход воды комбайна меньше номинального</string>
+
+    <string name="malfunction_112">Обрыв датчика давления масла в тормозной системе</string>
+    <string name="malfunction_113">КЗ датчика давления масла в тормозной системе</string>
+
+    <string name="malfunction_114">Обрыв датчика давления масла в системе маслонасоса</string>
+    <string name="malfunction_115">КЗ датчика давления масла в системе маслонасоса</string>
+
+    <string name="malfunction_116">Обрыв датчика расхода воды системы охлаждения МР</string>
+    <string name="malfunction_117">КЗ датчика расхода воды системы охлаждения МР</string>
+
+    <string name="malfunction_118">Обрыв датчика расхода воды системы охлаждения МП</string>
+    <string name="malfunction_119">КЗ датчика расхода воды системы охлаждения МП</string>
+
+    <string name="malfunction_120">Обрыв датчика давления воды в системе орошения</string>
+    <string name="malfunction_121">КЗ датчика давления воды в системе орошения</string>
+
+    <string name="malfunction_122">Обрыв датчика общего расхода воды комбайна</string>
+    <string name="malfunction_123">КЗ датчика общего расхода воды комбайна</string>
+
+    <string name="malfunction_124">Вода в электроблоке</string>
+
+    <string name="malfunction_125">Пониженное сопротивление изоляции кабеля левого двигателя резания</string>
+    <string name="malfunction_126">Пониженное сопротивление изоляции кабеля правого двигателя резания</string>
+
+    <string name="malfunction_127">Напряжение питания 1140В ниже минимально допустимого</string>
+    <string name="malfunction_128">Напряжение питания 1140В выше максимально допустимого</string>
+
+    <string name="malfunction_129">Нажат стоп аварийный на панеле лицевой</string>
+    <string name="malfunction_130">Нажат стоп комбайна на панели лицевой</string>
+    <string name="malfunction_131">Нажат стоп конвейера на панели лицевой</string>
+
+    <string name="malfunction_132">Нажат стоп комбайна на радиопульте</string>
+    <string name="malfunction_133">Нажат стоп конвейера на радиопульте</string>
+    <string name="malfunction_134">Нажат стоп подачи на радиопульте</string>
+
+    <string name="malfunction_135">Нажат стоп общий на пульте левом</string>
+    <string name="malfunction_136">Нажат стоп подачи на пульте левом</string>
+
+    <string name="malfunction_137">Нажат стоп общий на пульте правом</string>
+    <string name="malfunction_138">Нажат стоп подачи на пульте правом</string>
+
+    <string name="malfunction_139">Нажат стоп общий на пульте штрековом</string>
+    <string name="malfunction_140">Нажат стоп комбайна на пульте штрековом</string>
+    <string name="malfunction_141">Нажат стоп конвейера на пульте штрековом</string>
+    <string name="malfunction_142">Нажат стоп подачи на пульте штрековом</string>
+
+    <string name="malfunction_143">Токовый перегруз двигателя резания левого</string>
+    <string name="malfunction_144">Токовый перегруз двигателя резания правого</string>
+    <string name="malfunction_145">Токовый перегруз двигателя маслостанции</string>
+
+    <string name="malfunction_146">Обрыв фазы (жила 1) левого двигателя резания</string>
+    <string name="malfunction_147">Обрыв фазы (жила 2) левого двигателя резания</string>
+    <string name="malfunction_148">Обрыв фазы (жила 3) левого двигателя резания</string>
+
+    <string name="malfunction_149">Обрыв фазы (жила 1) правого двигателя резания</string>
+    <string name="malfunction_150">Обрыв фазы (жила 2) правого двигателя резания</string>
+    <string name="malfunction_151">Обрыв фазы (жила 3) правого двигателя резания</string>
+
+    <string name="malfunction_152">Обрыв фазы (жила 1) двигателя маслостанции</string>
+    <string name="malfunction_153">Обрыв фазы (жила 2) двигателя маслостанции</string>
+    <string name="malfunction_154">Обрыв фазы (жила 3) двигателя маслостанции</string>
+
+    <string name="malfunction_155">Ассиметрия токов левого двигателя резания</string>
+    <string name="malfunction_156">Ассиметрия токов правого двигателя резания</string>
+    <string name="malfunction_157">Ассиметрия токов двигателя маслостанции</string>
+
+    <string name="malfunction_158">Регулятор нагрузки управляет скоростью комбайна</string>
+
+    <string name="malfunction_159">Неисправен задатчик выбора к-ва работающих двигателей резания</string>
+
+    <string name="malfunction_160">Нет подтверждения включения контактора левого двигателя резания</string>
+    <string name="malfunction_161">Нет подтверждения включения контактора правого двигателя резания</string>
+
+    <string name="malfunction_162">Нет подтверждения включения контактора ПЧ</string>
+
+    <string name="malfunction_163">Нет накачки в ПЧ, ПЧ не готов</string>
+
+    <string name="malfunction_164">Перегруз Преобразователя частоы</string>
+    <string name="malfunction_165">Перегрев Преобразователя частоты</string>
+    <string name="malfunction_166">Нет 1140В на Преобразователе частоты</string>
+    <string name="malfunction_167">Сработала МТЗ в Преобразователе частоты</string>
+    <string name="malfunction_168">Пониженное напряжение на Преобразователе частоты</string>
+
+    <string name="malfunction_169">Ручной сброс (обнуление) местоположения</string>
+
+    <string name="malfunction_170">Уровень масла ниже допустимого</string>
+    <string name="malfunction_171">Температура масла выше допустимого</string>
+
+    <string name="malfunction_172">Токовый перегруз двигателя подачи левого</string>
+    <string name="malfunction_173">Токовый перегруз двигателя подачи правого</string>
+
+    <string name="malfunction_174">Нажат стоп Общий на радиопульте (главном)</string>
+    <string name="malfunction_175">Нажат стоп Общий на радиопульте (вспомогательный)</string>
+    <string name="malfunction_176">Нажат стоп комбайна на радиопульте (вспомогательный)</string>
+    <string name="malfunction_177">Нажат стоп конвейера на радиопульте(вспомогательный)</string>
+    <string name="malfunction_178">Нажат стоп подачи на радиопульте (вспомогательный)</string>
+    <string name="malfunction_179">Нет связи с радиопультом (радиопульт выключен) (вспомогательный)</string>
+
+    <string name="malfunction_180">Уставки комбайна изменены</string>
+    <string name="malfunction_181">Время на комбайне измененно</string>
+
+    <string name="malfunction_182">Сработал датчик выдергивания кабеля (УКТЦ)</string>
+
+    <string name="malfunction_183">Возможно порыв маслопроводов (большая скорость падения уровня масла)</string>
+
+    <string name="malfunction_184">Неисправен датчик температуры в ДКМ</string>
+
+</resources>
