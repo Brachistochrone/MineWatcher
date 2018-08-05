@@ -32,6 +32,31 @@ public class Const {
     public final static int SHEARER_TYPE_CLS450 = 12;
     public final static int SHEARER_TYPE_KDK500 = 13;
 
+    public final static int BLOCK_01h = 0x01;
+    public final static int BLOCK_02h = 0x02;
+    public final static int BLOCK_11h = 0x11;
+    public final static int BLOCK_12h = 0x12;
+    public final static int BLOCK_13h = 0x13;
+    public final static int BLOCK_15h = 0x15;
+    public final static int BLOCK_23h = 0x23;
+    public final static int BLOCK_25h = 0x25;
+    public final static int BLOCK_26h = 0x26;
+    public final static int BLOCK_31h = 0x31;
+    public final static int BLOCK_32h = 0x32;
+    public final static int BLOCK_41h = 0x41;
+    public final static int BLOCK_42h = 0x42;
+    public final static int BLOCK_51h = 0x51;
+    public final static int BLOCK_52h = 0x52;
+    public final static int BLOCK_53h = 0x53;
+    public final static int BLOCK_54h = 0x54;
+    public final static int BLOCK_55h = 0x55;
+    public final static int BLOCK_61h = 0x61;
+    public final static int BLOCK_91h = 0x91;
+    public final static int BLOCK_92h = 0x92;
+    public final static int BLOCK_93h = 0x93;
+    public final static int BLOCK_100h = 0x100;                                                     //главный дист. пульт
+    public final static int BLOCK_101h = 0x101;                                                     //вспомог. дист. пульт
+
     public final static float CURRENT_BAR_CHART_MAX_VALUE = 255.0f;                                 //Max значение токовых столбцов в %
     public final static float MOTOR_TEMPERATURE_BAR_CHART_MAX_VALUE = 160.0f;                       //Max значение темп столбцов двигателей в C
     public final static float BEARING_TEMPERATURE_BAR_CHART_MAX_VALUE = 80.0f;                      //Max значение темп столбцов двигателей в C

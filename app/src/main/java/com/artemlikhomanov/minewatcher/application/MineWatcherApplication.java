@@ -2,6 +2,8 @@ package com.artemlikhomanov.minewatcher.application;
 
 import android.app.Application;
 
+import com.crashlytics.android.Crashlytics;
+import io.fabric.sdk.android.Fabric;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
@@ -20,5 +22,6 @@ public class MineWatcherApplication extends Application {
         Realm.setDefaultConfiguration(realmConfiguration);
 
         super.onCreate();
+        Fabric.with(this, new Crashlytics());
     }
 }

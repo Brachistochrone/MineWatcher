@@ -209,7 +209,7 @@ public class ConnectionWithShearerActivity extends AppCompatActivity implements 
         adapter.addFragment(TechnicalWindowFragment.newInstance(mShearerType));
         adapter.addFragment(ThermometersListFragment.newInstance());
         adapter.addFragment(SensorsListFragment.newInstance());
-        adapter.addFragment(BlocksListFragment.newInstance(/*mShearerType*/));
+        adapter.addFragment(BlocksListFragment.newInstance(mShearerType));
         adapter.addFragment(MalfunctionsListFragment.newInstance(mPrimaryKey));
         adapter.addFragment(LocationDiagramFragment.newInstance(mPrimaryKey));
 

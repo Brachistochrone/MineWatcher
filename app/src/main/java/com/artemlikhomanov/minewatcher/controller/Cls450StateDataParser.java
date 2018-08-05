@@ -388,47 +388,47 @@ public class Cls450StateDataParser {
                     break;
                 case 117:
                     bTemp = charToBoolean(c);
-                    dataItem.setLeftControlPanel_I7015_ConnectionState(bTemp[3]);                   //есть связь i7015 ПУЛ
+                    dataItem.setBlock_32h_ConnectionState(bTemp[3]);                                //есть связь 32h
                     break;
                 case 118:
                     bTemp = charToBoolean(c);
-                    dataItem.setRightControlPanel_I7015_ConnectionState(bTemp[2]);                  //есть связь i7015 ПУП
-                    dataItem.setHydraulicFluidSensor_ConnectionState(bTemp[3]);                     //есть связь ДКМ
+                    dataItem.setBlock_42h_ConnectionState(bTemp[2]);                                //есть связь 42h
+                    dataItem.setBlock_55h_ConnectionState(bTemp[3]);                                //есть связь 55h
                     break;
                 case 119:
                     bTemp = charToBoolean(c);
-                    dataItem.setFrontPanel_I7050_ConnectionState(bTemp[0]);                         //есть связь i7050 ПаЛ
-                    dataItem.setFrontPanel_I7065_ConnectionState(bTemp[1]);                         //есть связь i7065 ПаЛ
-                    dataItem.setControlUnit_I7050_ConnectionState(bTemp[2]);                        //есть связь i7050 БУп
-                    dataItem.setControlUnit_I7017F_A13_ConnectionState(bTemp[3]);                   //есть связь i7017F А13 БУп
+                    dataItem.setSetBlock_01h_ConnectionState(bTemp[0]);                             //есть связь 01h
+                    dataItem.setBlock_02h_ConnectionState(bTemp[1]);                                //есть связь 02h
+                    dataItem.setBlock_11h_ConnectionState(bTemp[2]);                                //есть связь 11h
+                    dataItem.setBlock_12h_ConnectionState(bTemp[3]);                                //есть связь 12h
                     break;
                 case 120:
                     bTemp = charToBoolean(c);
-                    dataItem.setControlUnit_I7017F_A14_ConnectionState(bTemp[0]);                   //есть связь i7017F А14 БУп
-                    dataItem.setControlUnit_I7017F_A15_ConnectionState(bTemp[1]);                   //есть связь i7017F А15 БУп
-                    dataItem.setRemoteControl_Receiver_ConnectionState(bTemp[2]);                   //есть связь с радиоприемником
+                    dataItem.setBlock_13h_ConnectionState(bTemp[0]);                                //есть связь 13h
+                    dataItem.setBlock_15h_ConnectionState(bTemp[1]);                                //есть связь 15h
+                    dataItem.setBlock_23h_ConnectionState(bTemp[2]);                                //есть связь 23h
                     dataItem.setFirstRemoteControl_ConnectionState(bTemp[3]);                       //радиопульт включен главный
                     break;
                 case 121:
                     bTemp = charToBoolean(c);
-                    dataItem.setLeftCutterMotor_BKS_ConnectionState(bTemp[0]);                      //есть связь БКС МР левый
-                    dataItem.setRightCutterMotor_BKS_ConnectionState(bTemp[1]);                     //есть связь БКС МР правый
-                    dataItem.setLeftControlPanel_tCON_ConnectionState(bTemp[2]);                    //есть связь tCON-DIO ПУЛ
-                    dataItem.setLeftControlPanel_CodesDisplay_ConnectionState(bTemp[3]);            //есть связь БИ ПУЛ
+                    dataItem.setBlock_25h_ConnectionState(bTemp[0]);                                //есть связь 25h
+                    dataItem.setBlock_26h_ConnectionState(bTemp[1]);                                //есть связь 26h
+                    dataItem.setBlock_31h_ConnectionState(bTemp[2]);                                //есть связь 31h
+                    dataItem.setBlock_91h_ConnectionState(bTemp[3]);                                //есть связь 91h
                     break;
                 case 122:
                     bTemp = charToBoolean(c);
-                    dataItem.setRightControlPanel_tCON_ConnectionState(bTemp[0]);                   //есть связь tCON-DIO ПУП
-                    dataItem.setRightControlPanel_CodesDisplay_ConnectionState(bTemp[1]);           //есть связь БИ ПУП
-                    dataItem.setHydraulicValveControlUnit_I7067_ConnectionState(bTemp[2]);          //есть связь i7067 БУР
-                    dataItem.setHydraulicValveControlUnit_I7017FС_A2_ConnectionState(bTemp[3]);     //есть связь i7017FС А2 БУР
+                    dataItem.setBlock_41h_ConnectionState(bTemp[0]);                                 //есть связь 41h
+                    dataItem.setBlock_92h_ConnectionState(bTemp[1]);                                //есть связь 92h
+                    dataItem.setBlock_54h_ConnectionState(bTemp[2]);                                //есть связь 54h
+                    dataItem.setBlock_52h_ConnectionState(bTemp[3]);                                //есть связь 52h
                     break;
                 case 123:
                     bTemp = charToBoolean(c);
-                    dataItem.setHydraulicValveControlUnit_I7017FС_A3_ConnectionState(bTemp[0]);     //есть связь i7017FС А3 БУР
-                    dataItem.setRoadControlPanel_tCON_ConnectionState(bTemp[1]);                    //есть связь tCON-DIO ПУШ
-                    dataItem.setRoadControlPanel_CodesDisplay_ConnectionState(bTemp[2]);            //есть связь БИ ПУШ
-                    dataItem.setInverter_ConnectionState(bTemp[3]);                                 //есть связь ПЧ-120М
+                    dataItem.setBlock_53h_ConnectionState(bTemp[0]);                                //есть связь 53h
+                    dataItem.setBlock_51h_ConnectionState(bTemp[1]);                                //есть связь 51h
+                    dataItem.setBlock_93h_ConnectionState(bTemp[2]);                                //есть связь 93h
+                    dataItem.setBlock_61h_ConnectionState(bTemp[3]);                                //есть связь 61h
                     break;
                 case 148:
                     m_tempChar_one = c;                                                             //MSB

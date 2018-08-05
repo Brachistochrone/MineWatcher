@@ -17,18 +17,24 @@ import android.widget.TextView;
 
 import com.artemlikhomanov.minewatcher.R;
 import com.artemlikhomanov.minewatcher.model.Block;
+import com.artemlikhomanov.minewatcher.model.Block_cls450;
+import com.artemlikhomanov.minewatcher.model.Block_cls450_first;
+import com.artemlikhomanov.minewatcher.model.Block_kdk500;
 import com.artemlikhomanov.minewatcher.model.Cls450StateDataItem;
+import com.artemlikhomanov.minewatcher.model.Const;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class BlocksListFragment extends ListAbstractFragment {
+
+    private static final String SHEARER_TYPE_KEY = "SHEARER_TYPE_KEY";
 
     private boolean isReset = false;
 
     private int mCounter = 6;
+    private int mShearerTypeInt;
 
-    private Block[] mBlocks = Block.values();
+    private Block[] mBlocks;
 
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mAddresses = new ArrayList<>();
@@ -41,8 +47,15 @@ public class BlocksListFragment extends ListAbstractFragment {
     private int mNotConnectedColor;
 
     @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(SHEARER_TYPE_KEY, mShearerTypeInt);
+    }
+
+    @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        extractExtraValues(savedInstanceState);
         valuesInitialisation();
     }
 
@@ -61,29 +74,79 @@ public class BlocksListFragment extends ListAbstractFragment {
         isReset = false;
         mCounter++;
         if (mCounter == 8) {
-            mBlocks[0].setConnected(dataItem.getFrontPanel_I7050_ConnectionState());
-            mBlocks[1].setConnected(dataItem.getFrontPanel_I7065_ConnectionState());
-            mBlocks[2].setConnected(dataItem.getRemoteControl_Receiver_ConnectionState());
-            mBlocks[3].setConnected(dataItem.getFirstRemoteControl_ConnectionState());
-            mBlocks[4].setConnected(dataItem.getControlUnit_I7050_ConnectionState());
-            mBlocks[5].setConnected(dataItem.getControlUnit_I7017F_A13_ConnectionState());
-            mBlocks[6].setConnected(dataItem.getControlUnit_I7017F_A14_ConnectionState());
-            mBlocks[7].setConnected(dataItem.getControlUnit_I7017F_A15_ConnectionState());
-            mBlocks[8].setConnected(dataItem.getLeftCutterMotor_BKS_ConnectionState());
-            mBlocks[9].setConnected(dataItem.getRightCutterMotor_BKS_ConnectionState());
-            mBlocks[10].setConnected(dataItem.getLeftControlPanel_tCON_ConnectionState());
-            mBlocks[11].setConnected(dataItem.getLeftControlPanel_I7015_ConnectionState());
-            mBlocks[12].setConnected(dataItem.getLeftControlPanel_CodesDisplay_ConnectionState());
-            mBlocks[13].setConnected(dataItem.getRightControlPanel_tCON_ConnectionState());
-            mBlocks[14].setConnected(dataItem.getRightControlPanel_I7015_ConnectionState());
-            mBlocks[15].setConnected(dataItem.getRightControlPanel_CodesDisplay_ConnectionState());
-            mBlocks[16].setConnected(dataItem.getRoadControlPanel_tCON_ConnectionState());
-            mBlocks[17].setConnected(dataItem.getRoadControlPanel_CodesDisplay_ConnectionState());
-            mBlocks[18].setConnected(dataItem.getHydraulicFluidSensor_ConnectionState());
-            mBlocks[19].setConnected(dataItem.getHydraulicValveControlUnit_I7067_ConnectionState());
-            mBlocks[20].setConnected(dataItem.getHydraulicValveControlUnit_I7017FС_A2_ConnectionState());
-            mBlocks[21].setConnected(dataItem.getHydraulicValveControlUnit_I7017FС_A3_ConnectionState());
-            mBlocks[22].setConnected(dataItem.getInverter_ConnectionState());
+            for(Block block : mBlocks) {
+                switch (block.getAddress()) {
+                    case Const.BLOCK_01h:
+                        block.setConnected(dataItem.getBlock_01h_ConnectionState());
+                        break;
+                    case Const.BLOCK_02h:
+                        block.setConnected(dataItem.getBlock_02h_ConnectionState());
+                        break;
+                    case Const.BLOCK_11h:
+                        block.setConnected(dataItem.getBlock_11h_ConnectionState());
+                        break;
+                    case Const.BLOCK_12h:
+                        block.setConnected(dataItem.getBlock_12h_ConnectionState());
+                        break;
+                    case Const.BLOCK_13h:
+                        block.setConnected(dataItem.getBlock_13h_ConnectionState());
+                        break;
+                    case Const.BLOCK_15h:
+                        block.setConnected(dataItem.getBlock_15h_ConnectionState());
+                        break;
+                    case Const.BLOCK_23h:
+                        block.setConnected(dataItem.getBlock_23h_ConnectionState());
+                        break;
+                    case Const.BLOCK_25h:
+                        block.setConnected(dataItem.getBlock_25h_ConnectionState());
+                        break;
+                    case Const.BLOCK_26h:
+                        block.setConnected(dataItem.getBlock_26h_ConnectionState());
+                        break;
+                    case Const.BLOCK_31h:
+                        block.setConnected(dataItem.getBlock_31h_ConnectionState());
+                        break;
+                    case Const.BLOCK_32h:
+                        block.setConnected(dataItem.getBlock_32h_ConnectionState());
+                        break;
+                    case Const.BLOCK_41h:
+                        block.setConnected(dataItem.getBlock_41h_ConnectionState());
+                        break;
+                    case Const.BLOCK_42h:
+                        block.setConnected(dataItem.getBlock_42h_ConnectionState());
+                        break;
+                    case Const.BLOCK_51h:
+                        block.setConnected(dataItem.getBlock_51h_ConnectionState());
+                        break;
+                    case Const.BLOCK_52h:
+                        block.setConnected(dataItem.getBlock_52h_ConnectionState());
+                        break;
+                    case Const.BLOCK_53h:
+                        block.setConnected(dataItem.getBlock_53h_ConnectionState());
+                        break;
+                    case Const.BLOCK_54h:
+                        block.setConnected(dataItem.getBlock_54h_ConnectionState());
+                        break;
+                    case Const.BLOCK_55h:
+                        block.setConnected(dataItem.getBlock_55h_ConnectionState());
+                        break;
+                    case Const.BLOCK_61h:
+                        block.setConnected(dataItem.getBlock_61h_ConnectionState());
+                        break;
+                    case Const.BLOCK_91h:
+                        block.setConnected(dataItem.getBlock_91h_ConnectionState());
+                        break;
+                    case Const.BLOCK_92h:
+                        block.setConnected(dataItem.getBlock_92h_ConnectionState());
+                        break;
+                    case Const.BLOCK_93h:
+                        block.setConnected(dataItem.getBlock_93h_ConnectionState());
+                        break;
+                    case Const.BLOCK_100h:
+                        block.setConnected(dataItem.getFirstRemoteControl_ConnectionState());
+                        break;
+                }
+            }
 
             mRecyclerView.getAdapter().notifyDataSetChanged();
 
@@ -105,6 +168,19 @@ public class BlocksListFragment extends ListAbstractFragment {
 
     @Override
     void valuesInitialisation() {
+
+        switch (mShearerTypeInt) {
+            case Const.SHEARER_TYPE_CLS450_first:
+                mBlocks = Block_cls450_first.values();
+                break;
+            case Const.SHEARER_TYPE_CLS450:
+                mBlocks = Block_cls450.values();
+                break;
+            case Const.SHEARER_TYPE_KDK500:
+                mBlocks = Block_kdk500.values();
+                break;
+        }
+
         for (Block block : mBlocks) {
             mNames.add(getString(block.getBlockShortNameResourceId()));
             mAddresses.add(getString(block.getBlockAddressResourceId()));
@@ -122,9 +198,22 @@ public class BlocksListFragment extends ListAbstractFragment {
         mNotConnectedColor = getResources().getColor(mBlocks[0].getBlockDisconnectedColorResourceId());
     }
 
+    private void extractExtraValues(Bundle savedState) {
+        if (savedState != null) {
+            mShearerTypeInt = savedState.getInt(SHEARER_TYPE_KEY);
+        } else {
+            Bundle args = getArguments();
+            mShearerTypeInt = args.getInt(SHEARER_TYPE_KEY);
+        }
+    }
+
     @NonNull
-    public static Fragment newInstance() {
-        return new BlocksListFragment();
+    public static Fragment newInstance(int shearerType) {
+        Fragment fragment = new BlocksListFragment();
+        Bundle args = new Bundle();
+        args.putInt(SHEARER_TYPE_KEY, shearerType);
+        fragment.setArguments(args);
+        return fragment;
     }
 
     private class BlockHolder extends RecyclerView.ViewHolder {

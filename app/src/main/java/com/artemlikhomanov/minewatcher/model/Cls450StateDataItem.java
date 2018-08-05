@@ -226,30 +226,30 @@ public class Cls450StateDataItem {
     /*Связь*/
     private     Boolean         m_bResetByPowerOff_Connection;                                      //Был ResetByPowerOff
     private     Boolean         m_bResetByWDT_Connection;                                           //Был ResetByWDT
-    private     Boolean         m_bRightControlPanel_I7015_Connection;                              //есть связь i7015 ПУП
-    private     Boolean         m_bLeftControlPanel_I7015_Connection;                               //есть связь i7015 ПУЛ
-    private     Boolean         m_bHydraulicFluidSensor_Connection;                                 //есть связь ДКМ
-    private     Boolean         m_bFrontPanel_I7050_Connection;                                     //есть связь i7050 ПаЛ
-    private     Boolean         m_bFrontPanel_I7065_Connection;                                     //есть связь i7065 ПаЛ
-    private     Boolean         m_bControlUnit_I7050_Connection;                                    //есть связь i7050 БУп
-    private     Boolean         m_bControlUnit_I7017F_A13_Connection;                               //есть связь i7017F А13 БУп
-    private     Boolean         m_bControlUnit_I7017F_A14_Connection;                               //есть связь i7017F А14 БУп
-    private     Boolean         m_bControlUnit_I7017F_A15_Connection;                               //есть связь i7017F А15 БУп
-    private     Boolean         m_bRemoteControl_Receiver_Connection;                               //есть связь с радиоприемником
+    private     Boolean         m_bBlock_01h_Connection;                                            //есть связь 01h
+    private     Boolean         m_bBlock_02h_Connection;                                            //есть связь 02h
+    private     Boolean         m_bBlock_11h_Connection;                                            //есть связь 11h
+    private     Boolean         m_bBlock_12h_Connection;                                            //есть связь 12h
+    private     Boolean         m_bBlock_13h_Connection;                                            //есть связь 13h
+    private     Boolean         m_bBlock_15h_Connection;                                            //есть связь 15h
+    private     Boolean         m_bBlock_23h_Connection;                                            //есть связь 23h
+    private     Boolean         m_bBlock_25h_Connection;                                            //есть связь 25h
+    private     Boolean         m_bBlock_26h_Connection;                                            //есть связь 26h
+    private     Boolean         m_bBlock_31h_Connection;                                            //есть связь 31h
+    private     Boolean         m_bBlock_32h_Connection;                                            //есть связь 32h
+    private     Boolean         m_bBlock_41h_Connection;                                            //есть связь 41h
+    private     Boolean         m_bBlock_42h_Connection;                                            //есть связь 42h
+    private     Boolean         m_bBlock_51h_Connection;                                            //есть связь 51h
+    private     Boolean         m_bBlock_52h_Connection;                                            //есть связь 52h
+    private     Boolean         m_bBlock_53h_Connection;                                            //есть связь 53h
+    private     Boolean         m_bBlock_54h_Connection;                                            //есть связь 54h
+    private     Boolean         m_bBlock_55h_Connection;                                            //есть связь 55h
+    private     Boolean         m_bBlock_61h_Connection;                                            //есть связь 61h
+    private     Boolean         m_bBlock_91h_Connection;                                            //есть связь 91h
+    private     Boolean         m_bBlock_92h_Connection;                                            //есть связь 92h
+    private     Boolean         m_bBlock_93h_Connection;                                            //есть связь 93h
     private     Boolean         m_bFirstRemoteControl_Connection;                                   //радиопульт включен главный
     private     Boolean         m_bSecondRemoteControl_Connection;                                  //Вспом.радиопульт включен
-    private     Boolean         m_bLeftCutterMotor_BKS_Connection;                                  //есть связь БКС МР левый
-    private     Boolean         m_bRightCutterMotor_BKS_Connection;                                 //есть связь БКС МР правый
-    private     Boolean         m_bLeftControlPanel_tCON_Connection;                                //есть связь tCON-DIO ПУЛ
-    private     Boolean         m_bLeftControlPanel_CodesDisplay_Connection;                        //есть связь БИ ПУЛ
-    private     Boolean         m_bRightControlPanel_tCON_Connection;                               //есть связь tCON-DIO ПУП
-    private     Boolean         m_bRightControlPanel_CodesDisplay_Connection;                       //есть связь БИ ПУП
-    private     Boolean         m_bHydraulicValveControlUnit_I7067_Connection;                      //есть связь i7067 БУР
-    private     Boolean         m_bHydraulicValveControlUnit_I7017FС_A2_Connection;                 //есть связь i7017FС А2 БУР
-    private     Boolean         m_bHydraulicValveControlUnit_I7017FС_A3_Connection;                 //есть связь i7017FС А3 БУР
-    private     Boolean         m_bRoadControlPanel_tCON_Connection;                                //есть связь tCON-DIO ПУШ
-    private     Boolean         m_bRoadControlPanel_CodesDisplay_Connection;                        //есть связь БИ ПУШ
-    private     Boolean         m_bInverter_Connection;                                             //есть связь ПЧ-120М
 
     /*Наработка*/
     private     Integer         m_intYesterdayHaulageOperatingTime_OperatingTime;                   //машинное время прошлого дня (по подаче)
@@ -1267,84 +1267,84 @@ public class Cls450StateDataItem {
         m_strLastStop_TechnicalWindow = interpretCode(malfunctionCode);
     }
 
-    public Boolean getRightControlPanel_I7015_ConnectionState() {
-        return m_bRightControlPanel_I7015_Connection;
+    public Boolean getBlock_42h_ConnectionState() {
+        return m_bBlock_42h_Connection;
     }
 
-    public void setRightControlPanel_I7015_ConnectionState(boolean isConnected) {
-        m_bRightControlPanel_I7015_Connection = isConnected;
+    public void setBlock_42h_ConnectionState(boolean isConnected) {
+        m_bBlock_42h_Connection = isConnected;
     }
 
-    public Boolean getLeftControlPanel_I7015_ConnectionState() {
-        return m_bLeftControlPanel_I7015_Connection;
+    public Boolean getBlock_32h_ConnectionState() {
+        return m_bBlock_32h_Connection;
     }
 
-    public void setLeftControlPanel_I7015_ConnectionState(boolean isConnected) {
-        m_bLeftControlPanel_I7015_Connection = isConnected;
+    public void setBlock_32h_ConnectionState(boolean isConnected) {
+        m_bBlock_32h_Connection = isConnected;
     }
 
-    public Boolean getHydraulicFluidSensor_ConnectionState() {
-        return m_bHydraulicFluidSensor_Connection;
+    public Boolean getBlock_55h_ConnectionState() {
+        return m_bBlock_55h_Connection;
     }
 
-    public void setHydraulicFluidSensor_ConnectionState(boolean isConnected) {
-        m_bHydraulicFluidSensor_Connection = isConnected;
+    public void setBlock_55h_ConnectionState(boolean isConnected) {
+        m_bBlock_55h_Connection = isConnected;
     }
 
-    public Boolean getFrontPanel_I7050_ConnectionState() {
-        return m_bFrontPanel_I7050_Connection;
+    public Boolean getBlock_01h_ConnectionState() {
+        return m_bBlock_01h_Connection;
     }
 
-    public void setFrontPanel_I7050_ConnectionState(boolean isConnected) {
-        m_bFrontPanel_I7050_Connection = isConnected;
+    public void setSetBlock_01h_ConnectionState(boolean isConnected) {
+        m_bBlock_01h_Connection = isConnected;
     }
 
-    public Boolean getFrontPanel_I7065_ConnectionState() {
-        return m_bFrontPanel_I7065_Connection;
+    public Boolean getBlock_02h_ConnectionState() {
+        return m_bBlock_02h_Connection;
     }
 
-    public void setFrontPanel_I7065_ConnectionState(boolean isConnected) {
-        m_bFrontPanel_I7065_Connection = isConnected;
+    public void setBlock_02h_ConnectionState(boolean isConnected) {
+        m_bBlock_02h_Connection = isConnected;
     }
 
-    public Boolean getControlUnit_I7050_ConnectionState() {
-        return m_bControlUnit_I7050_Connection;
+    public Boolean getBlock_11h_ConnectionState() {
+        return m_bBlock_11h_Connection;
     }
 
-    public void setControlUnit_I7050_ConnectionState(boolean isConnected) {
-        m_bControlUnit_I7050_Connection = isConnected;
+    public void setBlock_11h_ConnectionState(boolean isConnected) {
+        m_bBlock_11h_Connection = isConnected;
     }
 
-    public Boolean getControlUnit_I7017F_A13_ConnectionState() {
-        return m_bControlUnit_I7017F_A13_Connection;
+    public Boolean getBlock_12h_ConnectionState() {
+        return m_bBlock_12h_Connection;
     }
 
-    public void setControlUnit_I7017F_A13_ConnectionState(boolean isConnected) {
-        m_bControlUnit_I7017F_A13_Connection = isConnected;
+    public void setBlock_12h_ConnectionState(boolean isConnected) {
+        m_bBlock_12h_Connection = isConnected;
     }
 
-    public Boolean getControlUnit_I7017F_A14_ConnectionState() {
-        return m_bControlUnit_I7017F_A14_Connection;
+    public Boolean getBlock_13h_ConnectionState() {
+        return m_bBlock_13h_Connection;
     }
 
-    public void setControlUnit_I7017F_A14_ConnectionState(boolean isConnected) {
-        m_bControlUnit_I7017F_A14_Connection = isConnected;
+    public void setBlock_13h_ConnectionState(boolean isConnected) {
+        m_bBlock_13h_Connection = isConnected;
     }
 
-    public Boolean getControlUnit_I7017F_A15_ConnectionState() {
-        return m_bControlUnit_I7017F_A15_Connection;
+    public Boolean getBlock_15h_ConnectionState() {
+        return m_bBlock_15h_Connection;
     }
 
-    public void setControlUnit_I7017F_A15_ConnectionState(boolean isConnected) {
-        m_bControlUnit_I7017F_A15_Connection = isConnected;
+    public void setBlock_15h_ConnectionState(boolean isConnected) {
+        m_bBlock_15h_Connection = isConnected;
     }
 
-    public Boolean getRemoteControl_Receiver_ConnectionState() {
-        return m_bRemoteControl_Receiver_Connection;
+    public Boolean getBlock_23h_ConnectionState() {
+        return m_bBlock_23h_Connection;
     }
 
-    public void setRemoteControl_Receiver_ConnectionState(boolean isConnected) {
-        m_bRemoteControl_Receiver_Connection = isConnected;
+    public void setBlock_23h_ConnectionState(boolean isConnected) {
+        m_bBlock_23h_Connection = isConnected;
     }
 
     public Boolean getFirstRemoteControl_ConnectionState() {
@@ -1363,99 +1363,99 @@ public class Cls450StateDataItem {
         m_bSecondRemoteControl_Connection = isConnected;
     }
 
-    public Boolean getLeftCutterMotor_BKS_ConnectionState () {
-        return m_bLeftCutterMotor_BKS_Connection;
+    public Boolean getBlock_25h_ConnectionState() {
+        return m_bBlock_25h_Connection;
     }
 
-    public void setLeftCutterMotor_BKS_ConnectionState(boolean isConnected) {
-        m_bLeftCutterMotor_BKS_Connection = isConnected;
+    public void setBlock_25h_ConnectionState(boolean isConnected) {
+        m_bBlock_25h_Connection = isConnected;
     }
 
-    public Boolean getRightCutterMotor_BKS_ConnectionState () {
-        return m_bRightCutterMotor_BKS_Connection;
+    public Boolean getBlock_26h_ConnectionState() {
+        return m_bBlock_26h_Connection;
     }
 
-    public void setRightCutterMotor_BKS_ConnectionState(boolean isConnected) {
-        m_bRightCutterMotor_BKS_Connection = isConnected;
+    public void setBlock_26h_ConnectionState(boolean isConnected) {
+        m_bBlock_26h_Connection = isConnected;
     }
 
-    public Boolean getLeftControlPanel_tCON_ConnectionState () {
-        return m_bLeftControlPanel_tCON_Connection;
+    public Boolean getBlock_31h_ConnectionState() {
+        return m_bBlock_31h_Connection;
     }
 
-    public void setLeftControlPanel_tCON_ConnectionState(boolean isConnected) {
-        m_bLeftControlPanel_tCON_Connection = isConnected;
+    public void setBlock_31h_ConnectionState(boolean isConnected) {
+        m_bBlock_31h_Connection = isConnected;
     }
 
-    public Boolean getLeftControlPanel_CodesDisplay_ConnectionState () {
-        return m_bLeftControlPanel_CodesDisplay_Connection;
+    public Boolean getBlock_91h_ConnectionState() {
+        return m_bBlock_91h_Connection;
     }
 
-    public void setLeftControlPanel_CodesDisplay_ConnectionState(boolean isConnected) {
-        m_bLeftControlPanel_CodesDisplay_Connection = isConnected;
+    public void setBlock_91h_ConnectionState(boolean isConnected) {
+        m_bBlock_91h_Connection = isConnected;
     }
 
-    public Boolean getRightControlPanel_tCON_ConnectionState () {
-        return m_bRightControlPanel_tCON_Connection;
+    public Boolean getBlock_41h_ConnectionState() {
+        return m_bBlock_41h_Connection;
     }
 
-    public void setRightControlPanel_tCON_ConnectionState(boolean isConnected) {
-        m_bRightControlPanel_tCON_Connection = isConnected;
+    public void setBlock_41h_ConnectionState(boolean isConnected) {
+        m_bBlock_41h_Connection = isConnected;
     }
 
-    public Boolean getRightControlPanel_CodesDisplay_ConnectionState () {
-        return m_bRightControlPanel_CodesDisplay_Connection;
+    public Boolean getBlock_92h_ConnectionState() {
+        return m_bBlock_92h_Connection;
     }
 
-    public void setRightControlPanel_CodesDisplay_ConnectionState(boolean isConnected) {
-        m_bRightControlPanel_CodesDisplay_Connection = isConnected;
+    public void setBlock_92h_ConnectionState(boolean isConnected) {
+        m_bBlock_92h_Connection = isConnected;
     }
 
-    public Boolean getHydraulicValveControlUnit_I7067_ConnectionState () {
-        return m_bHydraulicValveControlUnit_I7067_Connection;
+    public Boolean getBlock_54h_ConnectionState() {
+        return m_bBlock_54h_Connection;
     }
 
-    public void setHydraulicValveControlUnit_I7067_ConnectionState(boolean isConnected) {
-        m_bHydraulicValveControlUnit_I7067_Connection = isConnected;
+    public void setBlock_54h_ConnectionState(boolean isConnected) {
+        m_bBlock_54h_Connection = isConnected;
     }
 
-    public Boolean getHydraulicValveControlUnit_I7017FС_A2_ConnectionState () {
-        return m_bHydraulicValveControlUnit_I7017FС_A2_Connection;
+    public Boolean getBlock_52h_ConnectionState() {
+        return m_bBlock_52h_Connection;
     }
 
-    public void setHydraulicValveControlUnit_I7017FС_A2_ConnectionState(boolean isConnected) {
-        m_bHydraulicValveControlUnit_I7017FС_A2_Connection = isConnected;
+    public void setBlock_52h_ConnectionState(boolean isConnected) {
+        m_bBlock_52h_Connection = isConnected;
     }
 
-    public Boolean getHydraulicValveControlUnit_I7017FС_A3_ConnectionState () {
-        return m_bHydraulicValveControlUnit_I7017FС_A3_Connection;
+    public Boolean getBlock_53h_ConnectionState() {
+        return m_bBlock_53h_Connection;
     }
 
-    public void setHydraulicValveControlUnit_I7017FС_A3_ConnectionState(boolean isConnected) {
-        m_bHydraulicValveControlUnit_I7017FС_A3_Connection = isConnected;
+    public void setBlock_53h_ConnectionState(boolean isConnected) {
+        m_bBlock_53h_Connection = isConnected;
     }
 
-    public Boolean getRoadControlPanel_tCON_ConnectionState () {
-        return m_bRoadControlPanel_tCON_Connection;
+    public Boolean getBlock_51h_ConnectionState() {
+        return m_bBlock_51h_Connection;
     }
 
-    public void setRoadControlPanel_tCON_ConnectionState(boolean isConnected) {
-        m_bRoadControlPanel_tCON_Connection = isConnected;
+    public void setBlock_51h_ConnectionState(boolean isConnected) {
+        m_bBlock_51h_Connection = isConnected;
     }
 
-    public Boolean getRoadControlPanel_CodesDisplay_ConnectionState () {
-        return m_bRoadControlPanel_CodesDisplay_Connection;
+    public Boolean getBlock_93h_ConnectionState() {
+        return m_bBlock_93h_Connection;
     }
 
-    public void setRoadControlPanel_CodesDisplay_ConnectionState(boolean isConnected) {
-        m_bRoadControlPanel_CodesDisplay_Connection = isConnected;
+    public void setBlock_93h_ConnectionState(boolean isConnected) {
+        m_bBlock_93h_Connection = isConnected;
     }
 
-    public Boolean getInverter_ConnectionState () {
-        return m_bInverter_Connection;
+    public Boolean getBlock_61h_ConnectionState() {
+        return m_bBlock_61h_Connection;
     }
 
-    public void setInverter_ConnectionState(boolean isConnected) {
-        m_bInverter_Connection = isConnected;
+    public void setBlock_61h_ConnectionState(boolean isConnected) {
+        m_bBlock_61h_Connection = isConnected;
     }
 }

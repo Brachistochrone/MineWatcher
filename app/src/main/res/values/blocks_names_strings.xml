@@ -4,6 +4,7 @@
     <string name="front_panel_i7050_A21">Панель лицевая: i7050</string>
     <string name="A1_A21">A1-A21</string>
     <string name="front_panel_i7065BD_A22">Панель лицевая: i7065BD</string>
+    <string name="front_panel_i7063B_A22">Панель лицевая: i7063B</string>
     <string name="A1_A22">A1-A22</string>
     <string name="front_panel_receiver_A23">Панель лицевая: Радиоприемник</string>
     <string name="A1_A23">A1-A23</string>
@@ -15,10 +16,13 @@
     <string name="control_unit_i7050_A10">Блок управления: i7050</string>
     <string name="A1_A10">A1-A10</string>
     <string name="control_unit_i7017F_A13">Блок управления: i7017F</string>
+    <string name="control_unit_NL_8AI_A13">Блок управления: NL-8AI-Ex</string>
     <string name="A1_A13">A1-A13</string>
     <string name="control_unit_i7017F_A14">Блок управления: i7017F</string>
+    <string name="control_unit_NL_8AI_A14">Блок управления: NL-8AI-Ex</string>
     <string name="A1_A14">A1-A14</string>
     <string name="control_unit_i7017F_A15">Блок управления: i7017F</string>
+    <string name="control_unit_NL_8AI_A15">Блок управления: NL-8AI-Ex</string>
     <string name="A1_A15">A1-A15</string>
 
     <string name="breakers_panel_BKS1_A6">Панель контакторов: БКС 1</string>
@@ -27,15 +31,19 @@
     <string name="A1_A7">A1-A7</string>
 
     <string name="left_control_panel_tCON_A1">Пульт левый: tCON-DIO-2106</string>
+    <string name="left_control_panel_NL_16DI_Ex_A1">Пульт левый: NL-16DI-Ex</string>
     <string name="A2_A1">A2-A1</string>
     <string name="left_control_panel_i7015_A2">Пульт левый: i7015</string>
+    <string name="left_control_panel_i7017_A2">Пульт левый: i7017G</string>
     <string name="A2_A2">A2-A2</string>
     <string name="left_control_panel_codes_display_A3">Пульт левый: Блок индикации</string>
     <string name="A2_A3">A2-A3</string>
 
     <string name="right_control_panel_tCON_A1">Пульт правый: tCON-DIO-2106</string>
+    <string name="right_control_panel_NL_16DI_Ex_A1">Пульт правый: NL-16DI-Ex</string>
     <string name="A3_A1">A3-A1</string>
     <string name="right_control_panel_i7015_A2">Пульт правый: i7015</string>
+    <string name="right_control_panel_i7017_A2">Пульт правый: i7017G</string>
     <string name="A3_A2">A3-A2</string>
     <string name="right_control_panel_codes_display_A3">Пульт правый: Блок индикации</string>
     <string name="A3_A3">A3-A3</string>
