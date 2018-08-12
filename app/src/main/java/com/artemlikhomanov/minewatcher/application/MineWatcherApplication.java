@@ -2,6 +2,7 @@ package com.artemlikhomanov.minewatcher.application;
 
 import android.app.Application;
 
+import com.artemlikhomanov.minewatcher.services.LocationFetchService;
 import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
 import io.realm.Realm;
@@ -11,6 +12,7 @@ public class MineWatcherApplication extends Application {
 
     @Override
     public void onCreate() {
+        super.onCreate();
 
         // Initialize Realm
         Realm.init(this);
@@ -21,7 +23,11 @@ public class MineWatcherApplication extends Application {
         // Setting a default configuration in Application class, will ensure that it is available in the rest of code
         Realm.setDefaultConfiguration(realmConfiguration);
 
-        super.onCreate();
+        /*Установить циклический таймер для запуска службы LocationFetchService*/
+        if (!LocationFetchService.isServiceAlarmOn(getApplicationContext())) {
+            LocationFetchService.setServiceAlarm(getApplicationContext());
+        }
+
         Fabric.with(this, new Crashlytics());
     }
 }

@@ -28,20 +28,20 @@ public class MalfunctionsListFragment extends ListAbstractFragment {
 
     public static final int ITEM_TYPE_SECTION_HEADER_MALFUNCTIONS = 0;
     public static final int ITEM_TYPE_SECTION_CONTENT_MALFUNCTIONS = 1;
-    public static final int ITEM_TYPE_SECTION_HEADER_STOPS = 2;
-    public static final int ITEM_TYPE_SECTION_CONTENT_STOPS = 3;
+//    public static final int ITEM_TYPE_SECTION_HEADER_STOPS = 2;
+//    public static final int ITEM_TYPE_SECTION_CONTENT_STOPS = 3;
 
     private int[] mListItems = new int[]{
             ITEM_TYPE_SECTION_HEADER_MALFUNCTIONS,
             ITEM_TYPE_SECTION_CONTENT_MALFUNCTIONS,
-            ITEM_TYPE_SECTION_HEADER_STOPS,
-            ITEM_TYPE_SECTION_CONTENT_STOPS
+//            ITEM_TYPE_SECTION_HEADER_STOPS,
+//            ITEM_TYPE_SECTION_CONTENT_STOPS
     };
 
     private String[] mStrings = new String[4];
 
-    private Realm mDataBase;
-    private RealmResults<CauseOfStop> mStopsDB;
+//    private Realm mDataBase;
+//    private RealmResults<CauseOfStop> mStopsDB;
 
     private int mCounter = 6;
 
@@ -73,20 +73,20 @@ public class MalfunctionsListFragment extends ListAbstractFragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        mDataBase.close();
+//        mDataBase.close();
     }
 
     @Override
     void valuesInitialisation() {
         mStrings[0] = getString(R.string.current_malfunctions);
         mStrings[1] = getString(R.string.no_data);
-        mStrings[2] = getString(R.string.last_stop_cause);
-        mStrings[3] = getString(R.string.no_data);
+//        mStrings[2] = getString(R.string.last_stop_cause);
+//        mStrings[3] = getString(R.string.no_data);
 
-        mDataBase = Realm.getDefaultInstance();
-        mStopsDB = mDataBase.where(CauseOfStop.class)
-                .equalTo("parentPrimaryKey", mPrimaryKey)
-                .findAll();
+//        mDataBase = Realm.getDefaultInstance();
+//        mStopsDB = mDataBase.where(CauseOfStop.class)
+//                .equalTo("parentPrimaryKey", mPrimaryKey)
+//                .findAll();
     }
 
     @Override
@@ -102,7 +102,7 @@ public class MalfunctionsListFragment extends ListAbstractFragment {
         mCounter++;
         if (mCounter == 8) {
             mStrings[1] = updateMalfunctions(dataItem);
-            mStrings[3] = updateStops();
+//            mStrings[3] = updateStops();
 
             mRecyclerView.getAdapter().notifyDataSetChanged();
 
@@ -114,7 +114,7 @@ public class MalfunctionsListFragment extends ListAbstractFragment {
     void resetUI() {
         if (!isReset){
             mStrings[1] = getString(R.string.no_data);
-            mStrings[3] = getString(R.string.no_data);
+//            mStrings[3] = getString(R.string.no_data);
             mRecyclerView.getAdapter().notifyDataSetChanged();
         }
     }
@@ -128,14 +128,14 @@ public class MalfunctionsListFragment extends ListAbstractFragment {
                 dataItem.getMalfunctionFive();
     }
 
-    @NonNull
-    private String updateStops() {
-        StringBuilder s = new StringBuilder();
-        for (CauseOfStop stop : mStopsDB) {
-            s.append(stop.getCause()).append("\n");
-        }
-        return s.toString();
-    }
+//    @NonNull
+//    private String updateStops() {
+//        StringBuilder s = new StringBuilder();
+//        for (CauseOfStop stop : mStopsDB) {
+//            s.append(stop.getCause()).append("\n");
+//        }
+//        return s.toString();
+//    }
 
     @NonNull
     public static Fragment newInstance(long primaryKey) {
@@ -146,24 +146,24 @@ public class MalfunctionsListFragment extends ListAbstractFragment {
         return fragment;
     }
 
-    /*метод получения даты текущих рабочих суток в формате дд.мм.гг*/
-    private String getDate(){
-        Calendar calendar = Calendar.getInstance();
-        /*вычислить время суток - час с дробной частью*/
-        float time = (float)calendar.get(Calendar.HOUR_OF_DAY) + (calendar.get(Calendar.MINUTE)/60.0f);
-
-        /*если время суток больше или равно 8 часам - это текущие рабочие сутки*/
-        if (time >= 8.0f) {
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yy", Locale.getDefault());
-            return dateFormat.format(calendar.getTime());
-        } else {
-            /*если время суток меньше 8 часов - наступил следующий календарный день,
-            * но текущие рабочие сутки продолжаются*/
-            calendar.add(Calendar.DAY_OF_MONTH, -1);
-            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yy", Locale.getDefault());
-            return dateFormat.format(calendar.getTime());
-        }
-    }
+//    /*метод получения даты текущих рабочих суток в формате дд.мм.гг*/
+//    private String getDate(){
+//        Calendar calendar = Calendar.getInstance();
+//        /*вычислить время суток - час с дробной частью*/
+//        float time = (float)calendar.get(Calendar.HOUR_OF_DAY) + (calendar.get(Calendar.MINUTE)/60.0f);
+//
+//        /*если время суток больше или равно 8 часам - это текущие рабочие сутки*/
+//        if (time >= 8.0f) {
+//            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yy", Locale.getDefault());
+//            return dateFormat.format(calendar.getTime());
+//        } else {
+//            /*если время суток меньше 8 часов - наступил следующий календарный день,
+//            * но текущие рабочие сутки продолжаются*/
+//            calendar.add(Calendar.DAY_OF_MONTH, -1);
+//            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yy", Locale.getDefault());
+//            return dateFormat.format(calendar.getTime());
+//        }
+//    }
 
     /*ViewHolder тип 1*/
     private class SectionHeaderHolder extends RecyclerView.ViewHolder {
@@ -225,12 +225,12 @@ public class MalfunctionsListFragment extends ListAbstractFragment {
                 case ITEM_TYPE_SECTION_CONTENT_MALFUNCTIONS:
                     view = inflater.inflate(R.layout.list_item_section_content, parent, false);
                     return new SectionContentHolder(view);
-                case ITEM_TYPE_SECTION_HEADER_STOPS:
-                    view = inflater.inflate(R.layout.list_item_section_header, parent, false);
-                    return new SectionHeaderHolder(view);
-                case ITEM_TYPE_SECTION_CONTENT_STOPS:
-                    view = inflater.inflate(R.layout.list_item_section_content, parent, false);
-                    return new SectionContentHolder(view);
+//                case ITEM_TYPE_SECTION_HEADER_STOPS:
+//                    view = inflater.inflate(R.layout.list_item_section_header, parent, false);
+//                    return new SectionHeaderHolder(view);
+//                case ITEM_TYPE_SECTION_CONTENT_STOPS:
+//                    view = inflater.inflate(R.layout.list_item_section_content, parent, false);
+//                    return new SectionContentHolder(view);
             }
             return new SectionHeaderHolder(inflater.inflate(R.layout.list_item_section_header, parent, false));
         }
@@ -246,12 +246,12 @@ public class MalfunctionsListFragment extends ListAbstractFragment {
                 case ITEM_TYPE_SECTION_CONTENT_MALFUNCTIONS:
                     ((SectionContentHolder)holder).bindData(mStrings[ITEM_TYPE_SECTION_CONTENT_MALFUNCTIONS]);
                     break;
-                case ITEM_TYPE_SECTION_HEADER_STOPS:
-                    ((SectionHeaderHolder)holder).bindData(mStrings[ITEM_TYPE_SECTION_HEADER_STOPS]);
-                    break;
-                case ITEM_TYPE_SECTION_CONTENT_STOPS:
-                    ((SectionContentHolder)holder).bindData(mStrings[ITEM_TYPE_SECTION_CONTENT_STOPS]);
-                    break;
+//                case ITEM_TYPE_SECTION_HEADER_STOPS:
+//                    ((SectionHeaderHolder)holder).bindData(mStrings[ITEM_TYPE_SECTION_HEADER_STOPS]);
+//                    break;
+//                case ITEM_TYPE_SECTION_CONTENT_STOPS:
+//                    ((SectionContentHolder)holder).bindData(mStrings[ITEM_TYPE_SECTION_CONTENT_STOPS]);
+//                    break;
             }
         }
 

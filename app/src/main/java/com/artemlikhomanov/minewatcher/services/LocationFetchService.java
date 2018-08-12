@@ -41,7 +41,6 @@ public class LocationFetchService extends BaseAbstractService implements Message
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        Log.i(TAG, "LocationFetchService started");
 
         // Obtain a Realm instance
         m_DataBase = Realm.getDefaultInstance();
@@ -54,7 +53,6 @@ public class LocationFetchService extends BaseAbstractService implements Message
                     mPrimaryKey = address.getPrimaryKey();
                     notifyConnectionStateChanged(Const.NETWORK_NOT_AVAILABLE);
                 }
-                Log.i(TAG, "Network is not available now");
                 return;
             }
 
@@ -74,7 +72,6 @@ public class LocationFetchService extends BaseAbstractService implements Message
                 try{
                     m_tcpClient = new TCPClient(null, ipAddress, portNumber, this, this);
                 } catch (NullPointerException e){
-                    Log.d(TAG, "Caught null pointer exception");
                     e.printStackTrace();
                 }
                 m_tcpClient.run();
@@ -143,7 +140,6 @@ public class LocationFetchService extends BaseAbstractService implements Message
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         /*установить таймер, который каждые 6 минут запускает данную службу, первый запуск через 6 минуту*/
         alarmManager.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, (SystemClock.elapsedRealtime() + 360000), 360000, pendingIntent);
-        Log.i(TAG, "LocationFetchService pendingIntent was set");
     }
 
     /*Метод проверки установлен ли таймер запуска службы*/
@@ -163,6 +159,5 @@ public class LocationFetchService extends BaseAbstractService implements Message
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         alarmManager.cancel(pendingIntent);
         pendingIntent.cancel();
-        Log.i(TAG, "LocationFetchService pendingIntent was canceled");
     }
 }

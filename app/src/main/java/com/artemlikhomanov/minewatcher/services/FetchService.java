@@ -46,9 +46,9 @@ public class FetchService extends BaseAbstractService implements ConnectionState
         String ipAddress = "";
         String portNumber = "";
 
-        if (LocationFetchService.isServiceAlarmOn(getApplicationContext())) {
-            LocationFetchService.cancelServiceAlarm(getApplicationContext());
-        }
+//        if (LocationFetchService.isServiceAlarmOn(getApplicationContext())) {
+//            LocationFetchService.cancelServiceAlarm(getApplicationContext());
+//        }
 
         // Obtain a Realm instance
         m_DataBase = Realm.getDefaultInstance();
@@ -79,9 +79,9 @@ public class FetchService extends BaseAbstractService implements ConnectionState
         } finally {
             m_DataBase.close();
             /*Установить циклический таймер для запуска службы LocationFetchService*/
-            if (!LocationFetchService.isServiceAlarmOn(getApplicationContext())) {
-                LocationFetchService.setServiceAlarm(getApplicationContext());
-            }
+//            if (!LocationFetchService.isServiceAlarmOn(getApplicationContext())) {
+//                LocationFetchService.setServiceAlarm(getApplicationContext());
+//            }
             notifyConnectionStateChanged(Const.SERVER_DISCONNECTED);
         }
     }
