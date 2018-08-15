@@ -28,5 +28,9 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/colorCorumLightGrayHint</item>
     </style>
+    
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
 
 </resources>

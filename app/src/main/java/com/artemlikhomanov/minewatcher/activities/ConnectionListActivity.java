@@ -42,6 +42,9 @@ public class ConnectionListActivity extends AppCompatActivity implements View.On
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //заменить тему после показа Splash Screen
+        setTheme(R.style.AppTheme);
+
         super.onCreate(savedInstanceState);
         setContentView(getLayoutResId());
         
