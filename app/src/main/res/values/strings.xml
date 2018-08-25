@@ -79,5 +79,6 @@
     <string name="cancel">Отмена</string>
     <string name="refresh">Обновить</string>
     <string name="connection_restored">Подключено</string>
+    <string name="no_connections_available">Нет доступных подключений</string>
 
 </resources>

@@ -2,12 +2,10 @@ package com.artemlikhomanov.minewatcher.fragments;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,7 +15,6 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +25,7 @@ import android.widget.TextView;
 
 import com.artemlikhomanov.minewatcher.R;
 import com.artemlikhomanov.minewatcher.activities.ConnectionWithShearerActivity;
+import com.artemlikhomanov.minewatcher.fragments.listeners.OnAddressAddRemoveListener;
 import com.artemlikhomanov.minewatcher.model.realm.CauseOfStop;
 import com.artemlikhomanov.minewatcher.model.realm.ConnectionAddress;
 import com.artemlikhomanov.minewatcher.fragments.listeners.OnItemDeleteListener;
@@ -55,6 +53,7 @@ public class ConnectionListFragment extends ListAbstractFragment implements Real
     private RealmResults<ConnectionAddress> mConnectionAddresses;
 
     private OnItemDeleteListener mOnItemDeleteListener;
+    private OnAddressAddRemoveListener mOnAddressAddRemoveListener;
 
     private int mDeletedIndex;
 
@@ -124,6 +123,7 @@ public class ConnectionListFragment extends ListAbstractFragment implements Real
     @Override
     public void onChange(@NonNull RealmResults<ConnectionAddress> results) {
         updateAdapter();
+        mOnAddressAddRemoveListener.onAddressAddedOrRemoved();
     }
 
     @Override
@@ -248,6 +248,10 @@ public class ConnectionListFragment extends ListAbstractFragment implements Real
 
     public void setOnItemDeleteListener(OnItemDeleteListener itemDeleteListener) {
         mOnItemDeleteListener = itemDeleteListener;
+    }
+
+    public void setOnAddressAddRemoveListener(OnAddressAddRemoveListener addressAddRemoveListener) {
+        mOnAddressAddRemoveListener = addressAddRemoveListener;
     }
 
     private long getAbsoluteTime(){

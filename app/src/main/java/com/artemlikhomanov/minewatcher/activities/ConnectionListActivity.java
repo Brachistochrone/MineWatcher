@@ -10,14 +10,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 import com.artemlikhomanov.minewatcher.R;
 import com.artemlikhomanov.minewatcher.fragments.ConnectionDialogFragment;
 import com.artemlikhomanov.minewatcher.fragments.ConnectionListFragment;
+import com.artemlikhomanov.minewatcher.fragments.listeners.OnAddressAddRemoveListener;
 import com.artemlikhomanov.minewatcher.fragments.listeners.OnItemDeleteListener;
 import com.artemlikhomanov.minewatcher.model.realm.ConnectionAddress;
-
-import java.util.Calendar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,7 +25,8 @@ import io.realm.Realm;
 
 public class ConnectionListActivity extends AppCompatActivity implements View.OnClickListener,
                                                                          OnItemDeleteListener,
-                                                                         ConnectionDialogFragment.ConnectionDialogListener {
+                                                                         ConnectionDialogFragment.ConnectionDialogListener,
+                                                                         OnAddressAddRemoveListener {
 
     private static final String DIALOG_CONNECTION = "DIALOG_CONNECTION";
 
@@ -38,6 +39,9 @@ public class ConnectionListActivity extends AppCompatActivity implements View.On
     @BindView(R.id.fab)
     FloatingActionButton mFloatingButton;
 
+    @BindView(R.id.no_connections_message)
+    TextView mNoConnectionsTextView;
+
     private ConnectionListFragment mListFragment;
 
     @Override
@@ -49,6 +53,8 @@ public class ConnectionListActivity extends AppCompatActivity implements View.On
         setContentView(getLayoutResId());
         
         ButterKnife.bind(this);
+
+        checkConnectionList();
 
         FragmentManager fm = getSupportFragmentManager();
         mListFragment = (ConnectionListFragment) fm.findFragmentById(R.id.fragment_container);
@@ -65,6 +71,7 @@ public class ConnectionListActivity extends AppCompatActivity implements View.On
         mFloatingButton.setOnClickListener(this);
 
         mListFragment.setOnItemDeleteListener(this);
+        mListFragment.setOnAddressAddRemoveListener(this);
     }
 
     @Override
@@ -98,6 +105,11 @@ public class ConnectionListActivity extends AppCompatActivity implements View.On
         mListFragment.addNewAddress(name, ip, port, shearerType);
     }
 
+    @Override
+    public void onAddressAddedOrRemoved() {
+        checkConnectionList();
+    }
+
     private void showConnectionDialog() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         ConnectionDialogFragment dialogFragment = ConnectionDialogFragment.newInstance();
@@ -108,6 +120,21 @@ public class ConnectionListActivity extends AppCompatActivity implements View.On
     @NonNull
     private Fragment createFragment() {
         return ConnectionListFragment.newInstance();
+    }
+
+    private void checkConnectionList() {
+        if (isConnectionListEmpty()) {
+            mNoConnectionsTextView.setVisibility(View.VISIBLE);
+        } else {
+            mNoConnectionsTextView.setVisibility(View.GONE);
+        }
+    }
+
+    private boolean isConnectionListEmpty() {
+        Realm db = Realm.getDefaultInstance();
+        int addresses = db.where(ConnectionAddress.class).findAll().size();
+        db.close();
+        return addresses == 0;
     }
 
     private int getLayoutResId() {

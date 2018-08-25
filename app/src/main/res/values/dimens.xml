@@ -100,4 +100,6 @@
     <dimen name="spinner_item_padding">5dp</dimen>
     <dimen name="spinner_width">200dp</dimen>
 
+    <dimen name="no_connection_available_text_size">22sp</dimen>
+
 </resources>
