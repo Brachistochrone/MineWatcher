@@ -16,9 +16,8 @@ public class StartupReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals("android.intent.action.BOOT_COMPLETED")){
-          /*Проверить нужно ли запускать LocationFetchService*/
-            if (SettingsPreferences.isLocationFetchServiceUsed(context)) {
-                /*Установить циклический таймер для запуска службы LocationFetchService*/
+            /*Установить циклический таймер для запуска службы LocationFetchService*/
+            if (!LocationFetchService.isServiceAlarmOn(context)) {
                 LocationFetchService.setServiceAlarm(context);
             }
         }

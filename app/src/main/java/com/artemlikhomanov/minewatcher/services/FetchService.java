@@ -159,6 +159,9 @@ public class FetchService extends BaseAbstractService implements ConnectionState
             case Const.CONNECTION_ESTABLISHED:
                 EventBus.getDefault().post(new ConnectionStateChangedEvent(Const.CONNECTION_ESTABLISHED));
                 break;
+            case Const.SERVER_DISCONNECTED:
+                EventBus.getDefault().post(new ConnectionStateChangedEvent(Const.SERVER_DISCONNECTED));
+                break;
         }
     }
 
