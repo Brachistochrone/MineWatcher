@@ -19,7 +19,7 @@ public class Cls450StateDataParser {
     private static int m_ZeroQuantity = 0;
 
     /*Метод разбивает полученное сообщение и заполняет объект Cls450StateDataItem*/
-    public static Cls450StateDataItem parseItem (String receivedMessage, Context context, ConnectionStateChangedListener listener) {
+    public static synchronized Cls450StateDataItem parseItem (String receivedMessage, Context context, ConnectionStateChangedListener listener) {
 
         /*Если сообщение не null, не пустое и начинается с ! знака - значит это данные посылки*/
         if (receivedMessage != null && !receivedMessage.isEmpty() && receivedMessage.charAt(0) == '!') {
@@ -32,7 +32,6 @@ public class Cls450StateDataParser {
 
                     /*Если в посылке вместо данных нули*/
                     if (containsNoData()) {
-                        Log.i(TAG, "No connection with a shearer");
                         listener.notifyConnectionStateChanged(Const.NO_CONNECTION_WITH_SHEARER);
                         return null;
                     }
@@ -41,15 +40,12 @@ public class Cls450StateDataParser {
                 }
                 return null;
             }
-            Log.i(TAG, "Received Message contains not ASCII symbols");
             return null;
         } else if (receivedMessage != null && !receivedMessage.isEmpty() && receivedMessage.contains(Const.UNDERGROUND_MODEM_NOT_AVAILABLE_MESSAGE)) {
             /*Нет связи с подземной частью*/
-            Log.i(TAG, "Underground modem is not available now");
             /*Отправить сообщение для обновления UI*/
             listener.notifyConnectionStateChanged(Const.UNDERGROUND_MODEM_NOT_AVAILABLE);
         }
-        Log.i(TAG, "Received Message incorrect");
         return null;
     }
 
@@ -81,7 +77,6 @@ public class Cls450StateDataParser {
         if (s.equals(receivedMessage.substring(receivedMessage.length() - 2))) {
             return true;
         }
-        Log.i(TAG, "CheckSum verification failed");
         return false;
     }
 

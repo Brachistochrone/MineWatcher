@@ -38,7 +38,7 @@
 
         <service android:name=".services.FetchingKillerService"
                  android:exported="false"/>
-
+        <!--
         <service android:name=".services.LocationFetchService"
                  android:exported="false"/>
 
@@ -47,7 +47,7 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
             </intent-filter>
         </receiver>
-
+        -->
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="f74df312b178f9b8e10f70afa0cb18108ffd694e" />

@@ -82,7 +82,7 @@ public class FetchService extends BaseAbstractService implements ConnectionState
 //            if (!LocationFetchService.isServiceAlarmOn(getApplicationContext())) {
 //                LocationFetchService.setServiceAlarm(getApplicationContext());
 //            }
-            notifyConnectionStateChanged(Const.SERVER_DISCONNECTED);
+//            notifyConnectionStateChanged(Const.SERVER_DISCONNECTED);
         }
     }
 

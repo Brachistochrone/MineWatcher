@@ -32,7 +32,7 @@ public class FetchingKillerService extends IntentService {
             /*Остановить службу FetchService*/
             Intent fetchServiceIntent = FetchService.newIntent(getApplicationContext(), null, null, (long) 0.0);
             getApplicationContext().stopService(fetchServiceIntent);
-//            EventBus.getDefault().post(new ConnectionStateChangedEvent(Const.SERVER_DISCONNECTED));
+            EventBus.getDefault().post(new ConnectionStateChangedEvent(Const.SERVER_DISCONNECTED));
         }
         /*Установить циклический таймер для запуска службы LocationFetchService*/
 //        if (!LocationFetchService.isServiceAlarmOn(getApplicationContext())) {
