@@ -357,7 +357,24 @@ public class TechnicalWindowFragment extends BaseAbstractFragment {
                 }
             }
             /*вычислить скорость комбайна*/
-            setText(mVelocityValueTextView, dataItem.getShearerVelocity());
+            String velocity = "";
+            switch (mShearerTypeInt) {
+                case Const.SHEARER_TYPE_CLS450_first:
+                    velocity = String.valueOf(dataItem.getActualInverterFrequency() * Const.VELOCITY_CALC_COEF_CLS450_1);
+                    break;
+                case Const.SHEARER_TYPE_CLS450:
+                    velocity = String.valueOf(dataItem.getActualInverterFrequency() * Const.VELOCITY_CALC_COEF_CLS450);
+                    break;
+                case Const.SHEARER_TYPE_KDK500:
+                    velocity = String.valueOf(dataItem.getActualInverterFrequency() * Const.VELOCITY_CALC_COEF_KDK500);
+                    break;
+            }
+
+            if (velocity.length() > 4) {
+                velocity = new StringBuilder().append(velocity).substring(0, 4);
+            }
+
+            setText(mVelocityValueTextView, velocity);
         } else {
             resetVelocityAndDirection();
         }
@@ -625,7 +642,7 @@ public class TechnicalWindowFragment extends BaseAbstractFragment {
     /*Метод анимирует передвижение комбайна по линейке*/
     private void animateShearerTramming(ImageView ruler, ImageView shearer, int newLocation, int oldLocation, int duration, float coef, Boolean isLongwallStartRight){
 
-        if (newLocation != oldLocation){
+        if (newLocation != oldLocation && newLocation <= Const.LONGWALL_LENGTH ){   /*Чтобы комбайн не уезжал за пределы линейки*/
             if (isLongwallStartRight != null) {
                 /*если начало справа*/
                 if (isLongwallStartRight) {

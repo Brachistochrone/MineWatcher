@@ -202,7 +202,7 @@ public class Cls450StateDataItem {
     private     Boolean         m_bMotorsFrequency_Inverter;                                        //1000 об/мин // 750 об.мин
     private     Integer         m_intActualFrequency_Inverter;                                      //Частота текущая
     private     String          m_strActualFrequency_Inverter;                                      //Частота текущая
-    private     String          m_strShearerVelocity_Inverter;                                      //Скорость комбайна м/мин
+//    private     String          m_strShearerVelocity_Inverter;                                      //Скорость комбайна м/мин
     private     Integer         m_intGivenFrequency_Inverter;                                       //Частота заданная
     private     String          m_strGivenFrequency_Inverter;                                       //Частота заданная
     private     Integer         m_intTotalCurrent_Inverter;                                         //Ток (sum)
@@ -944,20 +944,20 @@ public class Cls450StateDataItem {
             m_strActualFrequency_Inverter = String.valueOf(frequency / 10.0f);
         }
 
-        setShearerVelocity(frequency);
+//        setShearerVelocity(frequency);
     }
 
-    public void setShearerVelocity(Integer frequency) {
-        try {
-            m_strShearerVelocity_Inverter = new StringBuilder().append(frequency * Const.VELOCITY_CALCULATION_COEFFICIENT).substring(0, 4);
-        } catch (IndexOutOfBoundsException e) {
-            m_strShearerVelocity_Inverter = String.valueOf(frequency * Const.VELOCITY_CALCULATION_COEFFICIENT);
-        }
-    }
-
-    public String getShearerVelocity () {
-        return m_strShearerVelocity_Inverter;
-    }
+//    private void setShearerVelocity(Integer frequency) {
+//        try {
+//            m_strShearerVelocity_Inverter = new StringBuilder().append(frequency * Const.VELOCITY_CALCULATION_COEFFICIENT).substring(0, 4);
+//        } catch (IndexOutOfBoundsException e) {
+//            m_strShearerVelocity_Inverter = String.valueOf(frequency * Const.VELOCITY_CALCULATION_COEFFICIENT);
+//        }
+//    }
+//
+//    public String getShearerVelocity () {
+//        return m_strShearerVelocity_Inverter;
+//    }
 
     public Integer getGivenInverterFrequency() {
         return m_intGivenFrequency_Inverter;

@@ -1,5 +1,6 @@
 package com.artemlikhomanov.minewatcher.workers;
 
+import android.content.Context;
 import android.net.ConnectivityManager;
 import android.support.annotation.NonNull;
 
@@ -18,6 +19,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import androidx.work.Worker;
+import androidx.work.WorkerParameters;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.Sort;
@@ -32,6 +34,10 @@ public class LocationFetchWorker extends Worker implements TCPClient.MessageCall
     private int m_MessageCounter = 0;
 
     private long mPrimaryKey;
+
+    public LocationFetchWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
+        super(context, workerParams);
+    }
 
     @NonNull
     @Override

@@ -6,7 +6,7 @@ public class Const {
     public static final long FETCHING_KILLER_TRIGGER_TIME = (long) (1000.0*300.0);                  //5 min, время, после которого FetchService будет уничтожен и сокет будет закрыт
 
     public final static String IP_NUMBER = "178.151.34.8";                                          //Server IP
-    public final static String UNDERGROUND_MODEM_NOT_AVAILABLE_MESSAGE = "No data from K2";
+    public final static String UNDERGROUND_MODEM_NOT_AVAILABLE_MESSAGE = "No data";
 
     public final static int PORT_NUMBER = 125;                                                      //Server port number
     public final static int DATA_ITEMS_ARRAY_LIST_SIZE = 800;                                       //Initial size of the ArrayList of Cls450StateDataItem
@@ -61,7 +61,9 @@ public class Const {
     public final static float MOTOR_TEMPERATURE_BAR_CHART_MAX_VALUE = 160.0f;                       //Max значение темп столбцов двигателей в C
     public final static float BEARING_TEMPERATURE_BAR_CHART_MAX_VALUE = 80.0f;                      //Max значение темп столбцов двигателей в C
     public final static float FREQUENCY_BAR_CHART_MAX_VALUE = 100.0f;                               //Max значение частотных столбцов в Гц
-    public final static float VELOCITY_CALCULATION_COEFFICIENT = 0.0175f;                           //Коэф. расчета скорость = (7/40)/10; 40Гц - 7 м/мин
+    public final static float VELOCITY_CALC_COEF_CLS450_1 = 0.0175f;                                //Коэф. расчета скорость = (7/40)/10; 40Гц - 7 м/мин
+    public final static float VELOCITY_CALC_COEF_CLS450 = 0.0175f;                                  //Коэф. расчета скорость = (7/40)/10; 40Гц - 7 м/мин
+    public final static float VELOCITY_CALC_COEF_KDK500 = 0.0154f;                                  //Коэф. расчета скорость = (6/39)/10; 39Гц - 6 м/мин
     public final static float LONGWALL_LENGTH = 320.0f;                                             //Длина лавы
     public final static float WIDTH_OF_ROOF_SUPPORT = 1.5f;                                         //Ширина секции
     public final static float LOCATION_DIAGRAM_DESCRIPTION_TEXT_SIZE = 12f;                         //Высота текста названия графиков
