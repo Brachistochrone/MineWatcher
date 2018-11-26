@@ -64,7 +64,7 @@ public class Const {
     public final static float VELOCITY_CALC_COEF_CLS450_1 = 0.0175f;                                //Коэф. расчета скорость = (7/40)/10; 40Гц - 7 м/мин
     public final static float VELOCITY_CALC_COEF_CLS450 = 0.0175f;                                  //Коэф. расчета скорость = (7/40)/10; 40Гц - 7 м/мин
     public final static float VELOCITY_CALC_COEF_KDK500 = 0.0154f;                                  //Коэф. расчета скорость = (6/39)/10; 39Гц - 6 м/мин
-    public final static float LONGWALL_LENGTH = 320.0f;                                             //Длина лавы
+    public final static float LONGWALL_LENGTH = 350.0f;                                             //Длина лавы
     public final static float WIDTH_OF_ROOF_SUPPORT = 1.5f;                                         //Ширина секции
     public final static float LOCATION_DIAGRAM_DESCRIPTION_TEXT_SIZE = 12f;                         //Высота текста названия графиков
     public final static float LOCATION_DIAGRAM_X_AXIS_MIN_VALUE = 0.0f;                             //Минимальное значение оси Х

@@ -54,6 +54,7 @@ public class LocationFetchWorker extends Worker implements TCPClient.MessageCall
                     mPrimaryKey = address.getPrimaryKey();
                     notifyConnectionStateChanged(Const.NETWORK_NOT_AVAILABLE);
                 }
+                m_DataBase.close();
                 return Result.SUCCESS;
             }
 
@@ -81,6 +82,7 @@ public class LocationFetchWorker extends Worker implements TCPClient.MessageCall
             m_DataBase.close();
         }
 
+        m_DataBase.close();
         return Result.SUCCESS;
     }
 

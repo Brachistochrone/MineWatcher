@@ -642,7 +642,7 @@ public class TechnicalWindowFragment extends BaseAbstractFragment {
     /*Метод анимирует передвижение комбайна по линейке*/
     private void animateShearerTramming(ImageView ruler, ImageView shearer, int newLocation, int oldLocation, int duration, float coef, Boolean isLongwallStartRight){
 
-        if (newLocation != oldLocation && newLocation <= Const.LONGWALL_LENGTH ){   /*Чтобы комбайн не уезжал за пределы линейки*/
+        if (newLocation != oldLocation){
             if (isLongwallStartRight != null) {
                 /*если начало справа*/
                 if (isLongwallStartRight) {
